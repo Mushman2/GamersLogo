@@ -18,23 +18,32 @@
   pickerBG.on('change', function(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
     var svg = document.getElementById("gamers-logo-svg").contentDocument;
-    var elements = svg.getElementsByClassName("Tower");
+    var elements = svg.getElementsByClassName("Background");
     for (var i = 0; i < elements.length; i++) elements[i].style.fill = this.color(r, g, b, a);
   });
   
   const pickerTow = new CP(document.getElementById('tower_colour'));
   pickerTow.on('change', function(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
+    var svg = document.getElementById("gamers-logo-svg").contentDocument;
+    var elements = svg.getElementsByClassName("Tower");
+    for (var i = 0; i < elements.length; i++) elements[i].style.fill = this.color(r, g, b, a);
   });
   
   const pickerDice = new CP(document.getElementById('dice_colour'));
   pickerDice.on('change', function(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
+    var svg = document.getElementById("gamers-logo-svg").contentDocument;
+    var elements = svg.getElementsByClassName("Dice");
+    for (var i = 0; i < elements.length; i++) elements[i].style.fill = this.color(r, g, b, a);
   });
   
   const pickerPip = new CP(document.getElementById('pip_colour'));
   pickerPip.on('change', function(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
+    var svg = document.getElementById("gamers-logo-svg").contentDocument;
+    var elements = svg.getElementsByClassName("Pips");
+    for (var i = 0; i < elements.length; i++) elements[i].style.fill = this.color(r, g, b, a);
   });
   
 </script>
