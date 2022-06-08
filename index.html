@@ -5,11 +5,32 @@
   data="GamersLogo.svg"
   type="image/svg+xml"
  ></object>
-<p><input type="text"></p>
+<p>Backgorund: <input id="background_colour" type="text"></p>
+<p>Tower: <input id="tower_colour" type="text"></p>
+<p>Dice: <input id="dice_colour" type="text"></p>
+<p>Pips: <input id="pip_colour" type="text"></p>
+
 <script src="picker.js"></script>
 <script>
-  const picker = new CP(document.querySelector('input'));
-  picker.on('change', function(r, g, b, a) {
+  
+  const pickerBG = new CP(document.querySelector('background_colour'));
+  pickerBG.on('change', function(r, g, b, a) {
     this.source.value = this.color(r, g, b, a);
   });
+  
+  const pickerTow = new CP(document.querySelector('tower_colour'));
+  pickerTow.on('change', function(r, g, b, a) {
+    this.source.value = this.color(r, g, b, a);
+  });
+  
+  const pickerDice = new CP(document.querySelector('dice_colour'));
+  pickerDice.on('change', function(r, g, b, a) {
+    this.source.value = this.color(r, g, b, a);
+  });
+  
+  const pickerPip = new CP(document.querySelector('pip_colour'));
+  pickerPip.on('change', function(r, g, b, a) {
+    this.source.value = this.color(r, g, b, a);
+  });
+  
 </script>
