@@ -4,3 +4,11 @@
   data="GamersLogo.svg"
   type="image/svg+xml"
  ></object>
+<p><input type="text"></p>
+<script src="index.min.js"></script>
+<script>
+  const picker = new CP(document.querySelector('input'));
+  picker.on('change', function(r, g, b, a) {
+    this.source.value = this.color(r, g, b, a);
+  });
+</script>
